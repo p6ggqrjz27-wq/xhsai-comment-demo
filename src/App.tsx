@@ -23,7 +23,7 @@ const MOCK_COMMENTS: Comment[] = [
     id: '1',
     author: '小红薯_123',
     avatar: 'https://picsum.photos/seed/user1/100/100',
-    content: '博主这套穿搭也太好看了吧！求链接求链接！✨',
+    content: '博主这套穿搭也太好看了吧！！✨',
     time: '2小时前',
     likes: 128
   },
@@ -31,7 +31,7 @@ const MOCK_COMMENTS: Comment[] = [
     id: '2',
     author: '爱生活的喵',
     avatar: 'https://picsum.photos/seed/user2/100/100',
-    content: '这个地方在哪里呀？感觉拍照好出片！📸',
+    content: '这个氛围感绝了，感觉拍照好出片！📸',
     time: '5小时前',
     likes: 45
   },
@@ -39,9 +39,17 @@ const MOCK_COMMENTS: Comment[] = [
     id: '3',
     author: '极简主义者',
     avatar: 'https://picsum.photos/seed/user3/100/100',
-    content: '博主的滤镜参数能分享一下吗？色调好高级。',
+    content: '感觉有点普通诶',
     time: '昨天',
     likes: 12
+  },
+  {
+    id: '4',
+    author: '小红薯_456',
+    avatar: 'https://picsum.photos/seed/user1/100/100',
+    content: '不太喜欢，感觉滤镜太重了',
+    time: '2小时前',
+    likes: 128
   }
 ];
 
