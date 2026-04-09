@@ -56,7 +56,7 @@ const MOCK_COMMENTS: Comment[] = [
 const DEFAULT_STYLE: UserStyle = {
   persona: '亲切活泼的邻家博主',
   selectedStyle: 'lively',
-  commonPhrases: ['宝子们', '绝绝子', '求关注', '爱你们'],
+  commonPhrases: [],
   tone: 'warm',
   emojiPreference: 'high'
 };
@@ -369,6 +369,9 @@ export default function App() {
                       className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all h-24"
                       placeholder="例如：宝子们, 绝绝子, 爱你们"
                     />
+                    <p className="text-xs text-gray-400">
+    建议输入3-5个常用表达，AI会更贴近你的风格～
+  </p>
                   </div>
 
                   <div className="grid grid-cols-2 gap-4">
