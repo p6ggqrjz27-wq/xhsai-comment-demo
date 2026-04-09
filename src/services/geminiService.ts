@@ -1,3 +1,5 @@
+let lastRequestTime = 0;
+const MIN_INTERVAL = 3000; // 3秒
 import { GoogleGenAI, Type } from "@google/genai";
 import { UserStyle } from "../types";
 
@@ -7,6 +9,11 @@ export async function generateXiaohongshuReplies(
   commentContent: string,
   userStyle: UserStyle
 ): Promise<string[]> {
+   const now = Date.now();
+  if (now - lastRequestTime < MIN_INTERVAL) {
+    return ["请求过于频繁，请稍后再试"];
+  }
+ 
   const prompt = `
     你是一个小红书博主的 AI 回复助手。你的任务是根据用户的评论内容，生成 3 个不同侧重点但都符合博主个人风格的回复选项。
 
@@ -52,6 +59,7 @@ export async function generateXiaohongshuReplies(
       }
     });
 
+    lastRequestTime = Date.now();
     const data = JSON.parse(response.text || '{"replies": []}');
     return data.replies.slice(0, 3);
   } catch (error) {
