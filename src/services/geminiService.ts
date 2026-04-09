@@ -29,12 +29,12 @@ export async function generateXiaohongshuReplies(
     3. 选项 2：侧重于引导关注或私信（如果适用）。
     4. 选项 3：侧重于展示博主个性和幽默感。
     5. 严格遵守博主的人设和常用语。
-    6. 必须严格遵守表情符号偏好设置。
+    6. 遵守表情符号偏好设置。
   `;
 
   try {
     const response = await ai.models.generateContent({
-      model: "gemini-1.5-flash-flash",
+      model: "gemini-1.5-flash",
       contents: prompt,
       config: {
         responseMimeType: "application/json",
