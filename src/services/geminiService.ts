@@ -34,7 +34,7 @@ export async function generateXiaohongshuReplies(
 
   try {
     const response = await ai.models.generateContent({
-      model: "gemini-3-flash-preview",
+      model: "gemini-1.5-flash-flash",
       contents: prompt,
       config: {
         responseMimeType: "application/json",
