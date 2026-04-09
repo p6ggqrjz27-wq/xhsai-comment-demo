@@ -15,8 +15,11 @@ export async function generateXiaohongshuReplies(
     - 人设描述：${userStyle.persona}
     - 常用语：${userStyle.commonPhrases.join(", ")}
     - 语气：${userStyle.tone === "warm" ? "温暖亲切" : userStyle.tone === "cool" ? "高冷简洁" : "中性客观"}
-    - 表情符号偏好：${userStyle.emojiPreference === "high" ? "多用表情" : userStyle.emojiPreference === "medium" ? "适量使用" : "少用表情"}
-
+    - 表情符号偏好：${userStyle.emojiPreference === "high" 
+  ? "多用表情" 
+  : userStyle.emojiPreference === "medium" 
+  ? "适量使用（最多1个）" 
+  : "禁止使用任何表情符号（emoji），回复中必须完全不包含表情"}
     待回复的评论内容：
     "${commentContent}"
 
@@ -26,7 +29,7 @@ export async function generateXiaohongshuReplies(
     3. 选项 2：侧重于引导关注或私信（如果适用）。
     4. 选项 3：侧重于展示博主个性和幽默感。
     5. 严格遵守博主的人设和常用语。
-    6. 包含适当的小红书风格表情符号。
+    6. 必须严格遵守表情符号偏好设置。
   `;
 
   try {
